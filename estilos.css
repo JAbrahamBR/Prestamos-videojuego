@@ -1,0 +1,199 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: #f5f5f5;
+    color: #222;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+
+header {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 30px 20px 15px;
+}
+
+h1 {
+    margin: 0;
+    font-size: 28px;
+}
+
+main {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px 40px;
+}
+
+section {
+    margin-bottom: 20px;
+    padding: 24px;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+h2 {
+    margin: 0 0 20px;
+    font-size: 20px;
+}
+
+h3 {
+    margin-top: 24px;
+    font-size: 16px;
+}
+
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+label {
+    font-weight: bold;
+}
+
+input,
+select,
+button {
+    font: inherit;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 6px;
+    color: #222;
+    background-color: white;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+}
+
+input:focus,
+select:focus {
+    outline: 2px solid #333;
+    outline-offset: 2px;
+}
+
+
+button {
+    align-self: flex-start;
+    padding: 10px 18px;
+    color: white;
+    background-color: #292929;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #444;
+}
+
+button:focus-visible {
+    outline: 2px solid #333;
+    outline-offset: 3px;
+}
+
+
+ul {
+    padding-left: 20px;
+}
+
+li {
+    margin-bottom: 6px;
+}
+
+
+.tabla-contenedor {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #f2f2f2;
+    font-size: 14px;
+}
+
+td {
+    overflow-wrap: anywhere;
+}
+
+td button {
+    padding: 8px 12px;
+    font-size: 14px;
+}
+
+
+.disponible,
+.prestado {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.disponible {
+    color: #246338;
+    background-color: #e7f3eb;
+}
+
+.prestado {
+    color: #824700;
+    background-color: #fff0d9;
+}
+
+
+#mensaje:empty {
+    display: none;
+}
+
+#mensaje {
+    padding: 12px;
+    background-color: #eaf0f7;
+    border: 1px solid #bccbde;
+    border-radius: 5px;
+}
+
+
+@media (max-width: 600px) {
+    header {
+        padding-top: 20px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    section {
+        padding: 16px;
+    }
+
+    th,
+    td {
+        padding: 10px;
+    }
+
+    form button {
+        width: 100%;
+    }
+}

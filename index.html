@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Préstamos de videojuegos</title>
+    <link rel="stylesheet" href="estilos.css">
+    <script src="app.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Préstamos de videojuegos</h1>
+    </header>
+
+    <main>
+        <section>
+            <h2>Registrar videojuego</h2>
+
+            <form id="form-juego">
+                <label for="titulo">Título</label>
+                <input type="text" id="titulo" maxlength="100" required>
+
+                <label for="plataforma">Plataforma</label>
+                <input type="text" id="plataforma"
+                       placeholder="Ejemplo: PlayStation 5" maxlength="50" required>
+
+                <label for="genero">Género</label>
+                <input type="text" id="genero"
+                       placeholder="Ejemplo: Aventura" maxlength="50" required>
+
+                <button type="submit">Guardar juego</button>
+            </form>
+        </section>
+
+        <section>
+            <h2>Registrar persona</h2>
+
+            <form id="form-persona">
+                <label for="nombre">Nombre completo</label>
+                <input type="text" id="nombre" maxlength="100" required>
+
+                <button type="submit">Guardar persona</button>
+            </form>
+
+            <h3>Personas registradas</h3>
+            <ul id="lista-personas">
+                <li>No hay personas registradas.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Realizar préstamo</h2>
+
+            <form id="form-prestamo">
+                <label for="juego-prestamo">Videojuego disponible</label>
+                <select id="juego-prestamo" required>
+                    <option value="">Seleccione un juego</option>
+                </select>
+
+                <label for="persona-prestamo">Persona</label>
+                <select id="persona-prestamo" required>
+                    <option value="">Seleccione una persona</option>
+                </select>
+
+                <label for="fecha-prestamo">Fecha del préstamo</label>
+                <input type="date" id="fecha-prestamo" required>
+
+                <button type="submit">Registrar préstamo</button>
+            </form>
+        </section>
+
+        <p id="mensaje" role="status"></p>
+
+        <section>
+            <h2>Mis videojuegos</h2>
+
+            <div class="tabla-contenedor">
+                <table>
+                    <thead>
+                        <tr>
+                            <th scope="col">Título</th>
+                            <th scope="col">Plataforma</th>
+                            <th scope="col">Género</th>
+                            <th scope="col">Estado</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tabla-juegos">
+                        <tr>
+                            <td colspan="4">No hay videojuegos registrados.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section>
+            <h2>Historial de préstamos</h2>
+
+            <div class="tabla-contenedor">
+                <table>
+                    <thead>
+                        <tr>
+                            <th scope="col">Videojuego</th>
+                            <th scope="col">Persona</th>
+                            <th scope="col">Fecha de préstamo</th>
+                            <th scope="col">Fecha de devolución</th>
+                            <th scope="col">Acción</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tabla-prestamos">
+                        <tr>
+                            <td colspan="5">No hay préstamos registrados.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
